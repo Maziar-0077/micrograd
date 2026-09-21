@@ -1,5 +1,6 @@
 import random
 from micrograd.engine import Value
+import numpy as np
 
 class Module:
 
@@ -59,6 +60,6 @@ class MLP(Module):
     def __repr__(self):
         return f"MLP of [{', '.join(str(layer) for layer in self.layers)}]"
 
-
-mlp = MLP(128, 64)
-
+X = np.random.randn(1024, 128)
+mlp = MLP(128, [64, 32, 2])
+print(mlp(X).shape)
