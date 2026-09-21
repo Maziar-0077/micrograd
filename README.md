@@ -1,5 +1,5 @@
 
-# micrograd
+# Wolf
 
 ![awww](puppy.jpg)
 
